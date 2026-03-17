@@ -7,5 +7,38 @@ vim.opt.wrap = false
 
 vim.keymap.set("n", "<leader>w", "<cmd>w<cr>")
 vim.keymap.set("n", "<leader>q", "<cmd>q<cr>")
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+-- Move selected lines up/down in visual mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Join lines but keep cursor in place
+vim.keymap.set("n", "J", "mzJ`z")
+
+-- Scroll half-page and keep cursor centered
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Keep search results centered
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- Paste over selection without overwriting clipboard
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- Yank to system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+-- Delete to void register (don't pollute clipboard)
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+
+-- Ctrl+C exits insert mode
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- Disable Q (accidental macro hell)
+vim.keymap.set("n", "Q", "<nop>")
+
+-- Find and replace word under cursor
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
