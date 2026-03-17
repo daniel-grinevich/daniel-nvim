@@ -7,6 +7,7 @@ MiniDeps.add({
 })
 
 MiniDeps.add({ source = "neovim/nvim-lspconfig" })
+MiniDeps.add({ source = "echasnovski/mini.completion" })
 MiniDeps.add({ source = "nvim-treesitter/nvim-treesitter" })
 MiniDeps.add({ source = "folke/tokyonight.nvim" })
 

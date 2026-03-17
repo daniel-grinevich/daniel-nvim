@@ -6,7 +6,7 @@ vim.opt.tabstop = 2
 vim.opt.wrap = false
 
 vim.keymap.set("n", "<leader>w", "<cmd>w<cr>")
-vim.keymap.set("n", "<leader>q", "<cmd>q<cr>")
+vim.keymap.set("n", "<leader>q", "<cmd>q!<cr>")
 
 -- Move selected lines up/down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
