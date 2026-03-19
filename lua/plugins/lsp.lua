@@ -1,6 +1,12 @@
+require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = { "pyright", "ruby_lsp", "clangd", "lua_ls" },
+})
+
 vim.lsp.enable("pyright")
 vim.lsp.enable("ruby_lsp")
 vim.lsp.enable("clangd")
+vim.lsp.enable("lua_ls")
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)

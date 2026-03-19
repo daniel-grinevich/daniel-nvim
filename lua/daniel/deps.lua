@@ -11,7 +11,15 @@ MiniDeps.add({ source = "echasnovski/mini.completion" })
 MiniDeps.add({ source = "nvim-treesitter/nvim-treesitter" })
 MiniDeps.add({ source = "folke/tokyonight.nvim" })
 
-MiniDeps.add({ source = "akinsho/toggleterm.nvim" })
+MiniDeps.add({ source = "williamboman/mason.nvim" })
+MiniDeps.add({
+  source = "williamboman/mason-lspconfig.nvim",
+  depends = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
+})
+MiniDeps.add({ source = "stevearc/conform.nvim" })
+MiniDeps.add({ source = "j-hui/fidget.nvim" })
+MiniDeps.add({ source = "folke/trouble.nvim" })
+MiniDeps.add({ source = "christoomey/vim-tmux-navigator" })
 MiniDeps.add({
   source = "ThePrimeagen/harpoon",
   checkout = "harpoon2",
