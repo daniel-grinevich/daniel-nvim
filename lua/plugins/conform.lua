@@ -2,7 +2,7 @@ require("conform").setup({
   formatters_by_ft = {
     lua = { "stylua" },
     python = { "black" },
-    ruby = { "rubocop" },
+    ruby = { "standardrb" },
     javascript = { "prettier" },
     typescript = { "prettier" },
   },

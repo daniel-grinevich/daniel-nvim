@@ -4,6 +4,12 @@ require("mason-lspconfig").setup({
 })
 
 vim.lsp.enable("pyright")
+vim.lsp.config("ruby_lsp", {
+  init_options = {
+    formatter = "standard",
+    linters = { "standard" },
+  },
+})
 vim.lsp.enable("ruby_lsp")
 vim.lsp.enable("clangd")
 vim.lsp.enable("lua_ls")
