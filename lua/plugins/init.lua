@@ -9,4 +9,5 @@ require("plugins.fugitive")
 require("plugins.conform")
 require("plugins.fidget")
 require("plugins.trouble")
+require("plugins.neo-tree")
 

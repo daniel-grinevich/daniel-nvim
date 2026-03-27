@@ -27,3 +27,7 @@ MiniDeps.add({
 })
 MiniDeps.add({ source = "mbbill/undotree" })
 MiniDeps.add({ source = "tpope/vim-fugitive" })
+MiniDeps.add({
+  source = "nvim-neo-tree/neo-tree.nvim",
+  depends = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
+})
