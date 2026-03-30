@@ -43,5 +43,8 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 -- Disable Q (accidental macro hell)
 vim.keymap.set("n", "Q", "<nop>")
 
+-- Show diagnostic float for current line
+vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+
 -- Find and replace word under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
