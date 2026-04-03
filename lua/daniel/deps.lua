@@ -31,3 +31,15 @@ MiniDeps.add({
   source = "nvim-neo-tree/neo-tree.nvim",
   depends = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
 })
+
+-- Debug Adapter Protocol (DAP)
+MiniDeps.add({ source = "mfussenegger/nvim-dap" })
+MiniDeps.add({ source = "nvim-neotest/nvim-nio" })
+MiniDeps.add({
+  source = "rcarriga/nvim-dap-ui",
+  depends = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+})
+MiniDeps.add({
+  source = "theHamsta/nvim-dap-virtual-text",
+  depends = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
+})

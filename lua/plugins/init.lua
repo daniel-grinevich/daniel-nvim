@@ -1,4 +1,4 @@
-require("plugins.mini-extras")   -- must be first (devicons mock for telescope)
+require("plugins.mini-extras") -- must be first (devicons mock for telescope)
 require("plugins.lsp")
 require("plugins.completion")
 require("plugins.telescope")
@@ -10,4 +10,4 @@ require("plugins.conform")
 require("plugins.fidget")
 require("plugins.trouble")
 require("plugins.neo-tree")
-
+require("plugins.dap")
