@@ -10,6 +10,8 @@ vim.opt.updatetime = 50
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.winbar = "%t"
+vim.opt.winbar = "%#WinBarFilename# %t %*"
 
 vim.cmd.colorscheme("tokyonight")
+
+vim.api.nvim_set_hl(0, "WinBarFilename", { bg = "#3b4261", fg = "#c0caf5", bold = true })
