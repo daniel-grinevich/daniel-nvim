@@ -8,3 +8,10 @@ require("mini.statusline").setup()
 
 -- Auto-close brackets/quotes in insert mode
 require("mini.pairs").setup()
+
+-- Git line change signs in the sign column
+require("mini.diff").setup({
+  view = {
+    style = "sign",
+  },
+})
