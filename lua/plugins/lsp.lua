@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "pyright", "ruby_lsp", "clangd", "lua_ls" },
+  ensure_installed = { "pyright", "ruby_lsp", "clangd", "lua_ls", "vue_ls", "ts_ls", "eslint" },
 })
 
 vim.lsp.enable("pyright")
@@ -13,6 +13,30 @@ vim.lsp.config("ruby_lsp", {
 vim.lsp.enable("ruby_lsp")
 vim.lsp.enable("clangd")
 vim.lsp.enable("lua_ls")
+
+vim.lsp.enable("vue_ls")
+local vue_plugin_path = vim.fn.expand(
+  "~/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/typescript-plugin"
+)
+vim.lsp.config("ts_ls", {
+  filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+  init_options = {
+    plugins = {
+      {
+        name = "@vue/typescript-plugin",
+        location = vue_plugin_path,
+        languages = { "vue" },
+      },
+    },
+  },
+})
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("eslint")
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.vue", "*.ts", "*.tsx", "*.js", "*.jsx" },
+  command = "silent! EslintFixAll",
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)

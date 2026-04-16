@@ -10,6 +10,9 @@ require("nvim-treesitter").install({
   "javascript",
   "query",
   "typescript",
+  "vue",
+  "css",
+  "html",
 })
 
 vim.api.nvim_create_autocmd('FileType', {

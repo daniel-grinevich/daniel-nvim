@@ -5,6 +5,13 @@ require("conform").setup({
     ruby = { "standardrb" },
     javascript = { "prettier" },
     typescript = { "prettier" },
+    javascriptreact = { "prettier" },
+    typescriptreact = { "prettier" },
+    vue = { "prettier" },
+    css = { "prettier" },
+    scss = { "prettier" },
+    html = { "prettier" },
+    json = { "prettier" },
   },
   format_on_save = {
     timeout_ms = 3000,
