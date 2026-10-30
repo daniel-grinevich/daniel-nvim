@@ -7,11 +7,18 @@ require("conform").setup({
     typescript = { "prettier" },
     javascriptreact = { "prettier" },
     typescriptreact = { "prettier" },
-    vue = { "prettier" },
+    vue = { "prettier", "eslint_fix" },
     css = { "prettier" },
     scss = { "prettier" },
     html = { "prettier" },
     json = { "prettier" },
+  },
+  formatters = {
+    eslint_fix = {
+      command = "npx",
+      args = { "eslint", "--fix", "$FILENAME" },
+      stdin = false,
+    },
   },
   format_on_save = {
     timeout_ms = 3000,

@@ -1,6 +1,7 @@
 require("plugins.mini-extras") -- must be first (devicons mock for telescope)
 require("plugins.lsp")
 require("plugins.completion")
+require("plugins.gpucomplete")
 require("plugins.telescope")
 require("plugins.treesitter")
 require("plugins.harpoon")

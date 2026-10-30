@@ -1,10 +1,15 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "pyright", "ruby_lsp", "clangd", "lua_ls", "vue_ls", "ts_ls", "eslint" },
+  ensure_installed = { "pyright", "clangd", "lua_ls", "vue_ls", "ts_ls", "eslint" },
 })
 
 vim.lsp.enable("pyright")
 vim.lsp.config("ruby_lsp", {
+  cmd = {
+    "bash",
+    "-c",
+    "source ~/.rvm/scripts/rvm && rvm use . && ruby-lsp",
+  },
   init_options = {
     formatter = "standard",
     linters = { "standard" },
