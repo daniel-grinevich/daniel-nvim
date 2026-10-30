@@ -9,6 +9,8 @@ vim.opt.updatetime = 50
 
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
+-- pane-killed sessions littered 151 stale swaps (2026-10-29); undofile covers recovery
+vim.opt.swapfile = false
 
 vim.opt.winbar = "%#WinBarFilename# %t %*"
 
